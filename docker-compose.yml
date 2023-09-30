@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: bake_db
+      MYSQL_USER: baker
+      MYSQL_PASSWORD: bake1234!
+    ports:
+      - "3306:3306"
